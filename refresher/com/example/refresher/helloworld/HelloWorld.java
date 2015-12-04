@@ -1,4 +1,4 @@
-package com.example.refresher;
+package com.example.refresher.helloworld;
 
 public class HelloWorld {
 

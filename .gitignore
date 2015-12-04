@@ -12,5 +12,7 @@
 hs_err_pid*
 /bin/
 
+# Eclipse specific settings
 .project
 .classpath
+.settings

@@ -1,4 +1,4 @@
-package com.example.refresher;
+package com.example.refresher.methods;
 
 public class BasicMethods {
 
@@ -11,7 +11,10 @@ public class BasicMethods {
 
 		// call a method with parameters, assign the result to a variable
 		int result = BasicMethods.add(5, 3);
-		System.out.println("BasicMethods.add(5, 3):" + result);
+		System.out.println("BasicMethods.add(5, 3): " + result);
+
+		System.out.println("BasicMethods.evenOrOdd(512349): " + BasicMethods.evenOrOdd(512349));
+		System.out.println("BasicMethods.evenOrOdd(1234): " + BasicMethods.evenOrOdd(1234));
 	}
 
 	/**
@@ -22,7 +25,7 @@ public class BasicMethods {
 	 * what your methods do.</li>
 	 * <li>After 6 months, you forget yourself what you've been doing.</li>
 	 * <li>You can generate pretty reports from code comments that can act as (partial) external documentation.</li>
-	 * <ul>
+	 * </ul>
 	 * 
 	 * 
 	 * Prints a given message to the console.
@@ -46,4 +49,19 @@ public class BasicMethods {
 	public static int add(int a, int b) {
 		return a + b;
 	}
+
+	/**
+	 * Determines whether a given integer is even or odd.
+	 * 
+	 * @param n
+	 *            number to check for parity (=even or odd).
+	 * @return "even" if the given integer is even, "odd" otherwise.
+	 */
+	public static String evenOrOdd(int n) {
+		if (n % 2 == 0) {
+			return "even"; // return statement can occur everywhere, not just at the end
+		}
+		return "odd";
+	}
+
 }

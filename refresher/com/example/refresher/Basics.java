@@ -1,50 +1,60 @@
 // Use packages to provide structure to your program
 package com.example.refresher;
 
+import java.util.Scanner;
+
 /**
- * Simple class showcasing basic java capabilities.
- * <p/>
- * NOTE:
- * <p/>
- * Things to Note:
- * <ul>
- * <p/>
- * <li>File names need to be the same as name of the *single* Class that is defined in them.</li>
- * <li>Everything is a class</li>
- * <li>Statements end with a semi-colon ";"</li>
- * <li>Coding conventions: line-length, CamelCase (class-> capitals, method-> small letter), Spacing (tabs), Comments</li>
- * <li>Class definitions: <access-modifier> class <class-name></li>
- * <li>Method definitions: <access-modifier> <return-type> <name> (<parameters> ...)</li>
- * </ul>
+ * Simple class show-casing basic java capabilities.
+ * 
  */
 public class Basics {
 
 	public static void main(String[] args) {
-		// static methods can be directly invoked on the class
+		output();
+
+		// alternatively, you can invoke static methods using the class Name.
 		// Basics.output();
-		// alternatively, you can invoke them on any class instance (notice the compiler warning)
-		// Basics basics = new Basics();
-		// basics.output();
 
-		Basics.arithmetic();
+		variables();
 
-		// Basics.types();
+		// arithmetic();
 
-		// Basics.arrays();
+		// types();
 
-		// Basics.ifThenElse();
+		// arrays();
 
-		// Basics.loops();
+		// conditionals();
+
+		// conditionalsSwitch();
+
+		// loops();
+
+		// int x = 123;
+		// scoping(x);
+		// // note that the reassignment of parameter x does not have effect outside Basics.scoping().
+		// // We call this assignment by value
+		// // IMPORTANT: This is only true for *primitive* types!
+		// System.out.println("x (after Basics.scoping(x)): " + x);
+
+		// print all program arguments. Note that we call them "arguments" and not "parameters".
+		// for (String arg: args){
+		// System.out.println(arg);
+		// }
 
 	}
 
 	public static void output() {
 		System.out.println("Hello " + "World!");
 		// Notice how we concatenate 2 strings using +
+		System.out.println("");
 
 		// print vs. println
 		System.out.print("Hello ");
 		System.out.println("World!");
+		System.out.println("");
+
+		// Escaping
+		System.out.println("John said: \"Hello Jessica!\"");
 
 		// System.err.println("This prints to the standard error output");
 		// notice that this can be out of order!
@@ -54,6 +64,30 @@ public class Basics {
 	public static Boolean returnBool(final Boolean bool) {
 		System.out.println("calling returnBool(" + bool + ") -> " + bool);
 		return bool;
+	}
+
+	public static void variables() {
+		// "declare" a variable: creating it (= allocating it in memory). Specify <type> <variableName>.
+		int numberNoVal; // you can declare without defining, but you cannot print it without assigning a value first
+		// System.out.println(numberNoVal); // this doesn't work
+
+		// Variables names can be of arbitrary length, but can only contain alphanumerical characters, dollar signs and
+		// underscores (and not start with a number).
+		int myVeryLongVariableNameThatGoesOnForeverAndEver; // this is fine, NOTE: camelCase (and not underscores)
+		int nameWithNumb3r5inIt;
+		// int 5artingWithNumber; // not allowed to start with a number
+		int with$pecial_chars;
+		// int foo*!()notAllowed; // other chars not allowed
+
+		// defining a variable: declaring + assigning value
+		int numberWithVal = 5;
+		System.out.println(numberWithVal);
+
+		// You can also define variables as final, meaning that they cannot be modified from their initial value.
+		final double PI = 3.1415;
+		System.out.println("PI: " + PI);
+		// PI = 4.0; // this won't work, you cannot reassing final variable
+
 	}
 
 	public static void types() {
@@ -67,9 +101,6 @@ public class Basics {
 
 		// integers
 		// primitive types: cannot be nullified, cannot be used in generic datastructures, don't have methods etc.
-		int numberNoVal; // you can declare without defining, but you cannot print it without assigning a value first
-		// System.out.println(numberNoVal); // this doesn't work
-
 		int number = 5;
 		Integer numberObj = 7;
 		System.out.println("number: " + number);
@@ -140,10 +171,10 @@ public class Basics {
 		// IMPORTANT: Null values are often used, but be very careful with them. They cause a lot of bugs!
 		// So many that some programming languages have banned them completely. With great power comes great
 		// responsibility!
-
 	}
 
 	public static void arithmetic() {
+		System.out.println("Basics.arithmetic()");
 		// basic math
 		System.out.println("# Basic Math #");
 		System.out.println("5 + 5 = " + (5 + 5));
@@ -215,6 +246,7 @@ public class Basics {
 	}
 
 	public static void arrays() {
+		System.out.println("Basics.arrays()");
 		// an Array is just a homogeneous (=same type) list of items
 
 		// array with 3 elements
@@ -252,6 +284,9 @@ public class Basics {
 		// Getting the length of an array
 		System.out.println("Length of myIntArray2: " + myIntArray2.length);
 
+		// Accessing last element
+		System.out.println("myIntArray2, last element:" + myIntArray2[myIntArray2.length - 1]);
+
 		// Nested arrays
 		int[][] myMatrix = new int[2][2];
 		myMatrix[0][0] = 10;
@@ -269,25 +304,34 @@ public class Basics {
 		System.out.println(myMatrix2[1][0] + " " + myMatrix2[1][1]);
 	}
 
-	public static void ifThenElse() {
+	public static void conditionals() {
+		System.out.println("Basics.conditionals()");
+		System.out.println("# Basic if #");
 		if (true) {
 			System.out.println("if True");
 		}
 		if (false) {
+			// this code is unreachable. Also referred to as "dead code". The compiler will remove this (=optimization).
 			System.out.println("if False"); // never printed
 		}
 
 		if (5 == 5) {
+			// NOTE: because this is such a trivial comparison, the compiler will optimize this by removing the if
+			// statement
 			System.out.println("5 == 5");
 		}
 
+		if (5 != 6) {
+			System.out.println("5 != 6");
+		}
+
+		System.out.println("# Basic if: variables #");
 		int x = 5;
 		int y = 5;
 		if (x == y) {
 			System.out.println("x == y");
 		}
 
-		// reassign x and y -> no type declarations!
 		x = 5;
 		y = 6;
 		if (x == y - 1) {
@@ -295,6 +339,7 @@ public class Basics {
 		}
 		System.out.println();
 
+		System.out.println("# If/Else #");
 		if (x == y) {
 			System.out.println("Not printed!");
 		} else {
@@ -302,7 +347,8 @@ public class Basics {
 		}
 		System.out.println();
 
-		// x = 0;
+		System.out.println("# If/Else if /Else #");
+		// x = 0;s
 		// x = 1;
 		// x = -1;
 		if (x < 0) {
@@ -314,11 +360,64 @@ public class Basics {
 		}
 		System.out.println();
 
-		// not equal
+		System.out.println("# Shorthand notation #");
+		// NOTE: This only works for a single line of code!
+		// Best practice: always (!) use curly brackets: {}
 		x = 5;
-		if (x != 6) {
-			System.out.println("x != 6");
+		if (x >= 5)
+			System.out.println("x > 5");
+		else if (x > 3)
+			System.out.println("3 > x > 5");
+		else
+			System.out.println("x < 3");
+
+	}
+
+	public static void conditionalsSwitch() {
+		System.out.println("Basics.conditionalsSwitch()");
+
+		// If a string can have many possible values, you can
+		String value = "myValue";
+		switch (value) {
+		case "myValue": {
+			System.out.println("Found 'myValue'");
+			break;
 		}
+		case "different value": {
+			System.out.println("Found 'different value'");
+			break;
+		}
+		case "no break": {
+			System.out.println("Found 'different value'");
+		}
+		default: {
+			System.out.println("Default value");
+			// no break needed because last value
+		}
+		}
+
+	}
+
+	public static void scoping(int param) {
+		System.out.println("Basics.scoping()");
+
+		System.out.println("# Function Scope #");
+		System.out.println("param:" + param);
+		// You can redefine parameters, but this is considered a bad practice! Tip: make your parameters final!
+		param = 6;
+		System.out.println("param:" + param);
+
+		int a = 5; // this is a local variable (function scope), it cannot be accessed outside this method
+		System.out.println("a: 5" + a);
+
+		System.out.println("# Block Scope #");
+		// anonymous block
+		{
+			int b = 9;
+			System.out.println("a: " + a); // we can access a as expected
+			System.out.println("b: " + b);
+		}
+		// System.out.println("b: " + b); // this won't work, because b is not defined outside the block
 
 	}
 
@@ -406,10 +505,10 @@ public class Basics {
 	}
 
 	public static void input() {
-		// Scanner reader = new Scanner(System.in); // Reading from System.in
-		// System.out.println("Enter a number: ");
-		// int n = reader.nextInt();
-
+		Scanner reader = new Scanner(System.in); // Reading from System.in
+		System.out.println("Enter a number: ");
+		int n = reader.nextInt();
+		System.out.println(n);
 	}
 
 }
