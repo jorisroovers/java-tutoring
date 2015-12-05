@@ -8,6 +8,11 @@ public class Person {
 
 	private Integer age;
 
+	public Person() {
+		// NOTE: ctor has no return value
+		System.out.println("Person.Person(): default ctor");
+	}
+
 	public Person(String firstName, String lastName, Integer age) {
 		this.firstName = firstName;
 		this.lastName = lastName;

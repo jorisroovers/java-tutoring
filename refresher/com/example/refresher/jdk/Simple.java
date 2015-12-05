@@ -1,4 +1,4 @@
-package jdk;
+package com.example.refresher.jdk;
 
 import java.util.Scanner;
 
@@ -17,7 +17,10 @@ public class Simple {
 		System.out.println("Enter a number: ");
 		int n = reader.nextInt();
 		System.out.println("echo: " + n);
+	}
 
+	public static void Math() {
+		// TODO (joris.roovers)
 	}
 
 }

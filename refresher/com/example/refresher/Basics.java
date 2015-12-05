@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Basics {
 
 	public static void main(String[] args) {
-		output();
+		// output();
 
 		// alternatively, you can invoke static methods using the class Name.
 		// Basics.output();
@@ -19,7 +19,7 @@ public class Basics {
 
 		// types();
 
-		// arithmetic();
+		arithmetic();
 
 		// arrays();
 
@@ -147,12 +147,24 @@ public class Basics {
 		// booleans = true or false
 		boolean myBool = true;
 		Boolean boolObj = false;
-		System.out.println("boolObj:" + boolObj + " class: " + boolObj.getClass());
+		System.out.println("myBool: " + myBool);
+		System.out.println("boolObj: " + boolObj + " class: " + boolObj.getClass());
+		System.out.println();
 
 		// decimals!
-		float decimalNumber = 10.0f; // notice the 'f'
-		// note that double precision is the default in Java
+		// Float = ~ 7 decimal precisions
+		float floatNumber = 10.0f; // notice the 'f'
+		Float floatObj = 10.0f;
+
+		System.out.println("floatNumber: " + floatNumber);
+		System.out.println("floatObj: " + floatObj + " class:" + floatObj.getClass());
+
+		// note that double precision (~15 decimals) is the default in Java
 		double doublePrecision = 10.0;
+		Double doubleObj = 10.0;
+		System.out.println("doublePrecision: " + doublePrecision);
+		System.out.println("doubleObj: " + doubleObj + " class:" + doubleObj.getClass());
+
 		double scientificNotation = 3.2e3; // 3.2 * 10^3 = 3200
 		System.out.println("scientificNotation: " + scientificNotation);
 		System.out.println();
@@ -211,9 +223,16 @@ public class Basics {
 		System.out.println("10 - 4 = " + (10 - 4));
 		System.out.println("2 * 3 = " + (2 * 3));
 		System.out.println("6 / 3 = " + (6 / 3));
+		System.out.println("6 / 4 = " + (6 / 4)); // integer division
+		System.out.println("6.0 / 4.0 = " + (6.0 / 4.0)); // decimal division
 		System.out.println("8 % 3 = " + (8 % 3)); // module: remainder
+
+		System.out.println("# Operator precedence #");
 		System.out.println("(8 + 3) * 5 / (2 % 3) = " + ((8 + 3) * 5 / (2 % 3))); // complex arithmetic
 		System.out.println();
+
+		System.out.println("# Relational operations take precendence #");
+		System.out.println("8 + 3 > 5 * 4 = " + (8 + 3 > 5 * 4));
 
 		// arithmetic convenience syntax
 		System.out.println("# Arithmetic Convenience Syntax #");
@@ -283,9 +302,25 @@ public class Basics {
 		System.out.println("false &&  Basics.returnBool(true): " + (true || Basics.returnBool(true)));
 
 	}
-	
-	public void relational(){
-		System.out.println("TODO");
+
+	public void relational() {
+		System.out.println("Basics.relational()");
+
+		System.out.println("# Equality #");
+		System.out.println("5 == 5: " + (5 == 5));
+		System.out.println("5 == 4: " + (5 == 4));
+		System.out.println("5 != 5: " + (5 != 5));
+		System.out.println("5 != 4: " + (5 != 4));
+		System.out.println();
+
+		System.out.println("# Order #");
+		System.out.println("5 > 4: " + (5 > 4));
+		System.out.println("5 < 4: " + (5 < 4));
+		System.out.println("5 >= 5: " + (5 >= 5));
+		System.out.println("5 >= 4: " + (5 >= 4));
+		System.out.println("5 <= 5: " + (5 <= 5));
+		System.out.println("5 <= 6: " + (5 <= 6));
+
 	}
 
 	public static void arrays() {
@@ -422,9 +457,15 @@ public class Basics {
 
 	}
 
+	public static void nestedIfs() {
+		// TODO
+	}
+
 	public static void conditionalsSwitch() {
 		System.out.println("Basics.conditionalsSwitch()");
 
+		// Switch on Strings: Java 7
+		// You can switch: int, String, char
 		// If a string can have many possible values, you can
 		String value = "myValue";
 		switch (value) {

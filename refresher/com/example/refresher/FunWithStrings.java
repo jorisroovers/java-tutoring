@@ -1,7 +1,5 @@
 package com.example.refresher;
 
-import java.util.Iterator;
-
 public class FunWithStrings {
 
 	public static void main(String[] args) {
