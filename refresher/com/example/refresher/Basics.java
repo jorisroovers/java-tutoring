@@ -15,11 +15,11 @@ public class Basics {
 		// alternatively, you can invoke static methods using the class Name.
 		// Basics.output();
 
-		variables();
-
-		// arithmetic();
+		// variables();
 
 		// types();
+
+		// arithmetic();
 
 		// arrays();
 
@@ -46,15 +46,30 @@ public class Basics {
 	public static void output() {
 		System.out.println("Hello " + "World!");
 		// Notice how we concatenate 2 strings using +
-		System.out.println("");
+		System.out.println();
+		System.out.println("-----------------------");
 
-		// print vs. println
+		// print vs. println vs. printf
 		System.out.print("Hello ");
 		System.out.println("World!");
-		System.out.println("");
+		System.out.printf("World %s!", "World");
+		System.out.println();
+		System.out.printf("World %s %d!", "World", 2);
+		System.out.println();
+		System.out.println("-----------------------");
+
+		// Special characters
+		System.out.println("Hello \n World");
+		System.out.println("Hello \r World");
+		System.out.println("Hello \t World");
+		System.out.printf("Hello %n World");
+		System.out.println();
+		System.out.println("-----------------------");
 
 		// Escaping
 		System.out.println("John said: \"Hello Jessica!\"");
+		System.out.println("Hello emoticon: \\o/");
+		System.out.println("-----------------------");
 
 		// System.err.println("This prints to the standard error output");
 		// notice that this can be out of order!
@@ -91,6 +106,7 @@ public class Basics {
 	}
 
 	public static void types() {
+		System.out.println("Basics.types()");
 		// variables allow you to store values so that you can refer to them later. They are fundamental to programming.
 		// In java and many other programming languages, variables are typed.
 		// Why types?
@@ -103,9 +119,13 @@ public class Basics {
 		// primitive types: cannot be nullified, cannot be used in generic datastructures, don't have methods etc.
 		int number = 5;
 		Integer numberObj = 7;
+		int hexNumber = 0x23; // 35
+		int octalNumber = 012; // 10
 		System.out.println("number: " + number);
 		// note: type sizes (e.g. Integer.BYTES) are JVM dependent!
 		System.out.println("numberObj:" + numberObj + " class: " + numberObj.getClass() + " bytes: " + Integer.BYTES);
+		System.out.println("hexNumber: " + hexNumber);
+		System.out.println("octalNumber: " + octalNumber);
 		System.out.println("Integer MIN VALUE:" + Integer.MIN_VALUE + ", MAX VALUE:" + Integer.MAX_VALUE);
 		System.out.println();
 
@@ -142,6 +162,16 @@ public class Basics {
 		char b = 98; // ASCII
 		Character capitalC = 67;
 		System.out.println("a:" + a + ", b: " + b + ", C: " + capitalC);
+		System.out.println();
+
+		// bytes
+		// 8 bits -> 2^8 = 256 values: [-128, 127]
+		byte myByte = 127;
+		byte myByte2 = -128;
+		byte myByte3 = 0x32; // 50 in dec10. Hex notation is often used in combination with byte types.
+		System.out.println("myByte: " + myByte);
+		System.out.println("myByte2: " + myByte2);
+		System.out.println("myByte3: " + myByte3);
 
 		// Strings
 		// A string is really a series of characters ended by the 'null character' \0. Since it's such a common
@@ -207,6 +237,15 @@ public class Basics {
 		System.out.println("x %= 3: " + x);
 		System.out.println();
 
+		System.out.println("# ++x vs. x++ #");
+		x = 1;
+		System.out.println("x = 1: " + x);
+		System.out.println("++x: " + (++x));
+		System.out.println("x: " + x);
+		System.out.println("x++: " + (x++));
+		System.out.println("x: " + x);
+		System.out.println();
+
 		// boolean arithmetic
 		System.out.println("# Boolean arithmetic #");
 
@@ -243,6 +282,10 @@ public class Basics {
 		System.out.println("true ||  Basics.returnBool(false): " + (true || Basics.returnBool(false)));
 		System.out.println("false &&  Basics.returnBool(true): " + (true || Basics.returnBool(true)));
 
+	}
+	
+	public void relational(){
+		System.out.println("TODO");
 	}
 
 	public static void arrays() {
@@ -360,7 +403,7 @@ public class Basics {
 		}
 		System.out.println();
 
-		System.out.println("# Shorthand notation #");
+		System.out.println("# Without curly brackets/braces #");
 		// NOTE: This only works for a single line of code!
 		// Best practice: always (!) use curly brackets: {}
 		x = 5;
@@ -370,6 +413,12 @@ public class Basics {
 			System.out.println("3 > x > 5");
 		else
 			System.out.println("x < 3");
+
+		System.out.println("# Shorthand notation #");
+
+		x = 5;
+		y = x >= 5 ? 10 : -1;
+		System.out.println("y = x >= 5 ? 10 : -1; // --> " + y);
 
 	}
 

@@ -6,5 +6,4 @@ public class HelloWorld {
 		// This is a comment: ignored by the compiler
 		System.out.println("Hello, World!");
 	}
-
 }
