@@ -9,9 +9,6 @@ public class Catching {
 		catchMultiple();
 		catchAll();
 
-		// PRO-TIP: Exceptions occur in exceptional conditions, not as part of negative use-cases
-		// For example: Invalid input is not an exception condition!
-
 	}
 
 	public static void exceptions() {

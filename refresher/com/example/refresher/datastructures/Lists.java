@@ -9,8 +9,6 @@ public class Lists {
 
 	public static void main(final String[] args) {
 
-		// TODO(joris.roovers): other types of lists
-
 		instantiation();
 
 		operations();
