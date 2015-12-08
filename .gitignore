@@ -16,3 +16,7 @@ hs_err_pid*
 .project
 .classpath
 .settings
+/nbproject/private/
+/build/
+nbproject/
+build.xml

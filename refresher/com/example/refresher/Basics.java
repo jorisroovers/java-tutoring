@@ -27,8 +27,6 @@ public class Basics {
 
 		// conditionalsSwitch();
 
-		// loops();
-
 		// int x = 123;
 		// scoping(x);
 		// // note that the reassignment of parameter x does not have effect outside Basics.scoping().
@@ -117,7 +115,7 @@ public class Basics {
 
 		// integers
 		// primitive types: cannot be nullified, cannot be used in generic datastructures, don't have methods etc.
-		int number = 5;
+		int number = 5; // the number 5 is called a literal!
 		Integer numberObj = 7;
 		int hexNumber = 0x23; // 35
 		int octalNumber = 012; // 10
@@ -380,6 +378,7 @@ public class Basics {
 		System.out.println("myMatrix2: ");
 		System.out.println(myMatrix2[0][0] + " " + myMatrix2[0][1]);
 		System.out.println(myMatrix2[1][0] + " " + myMatrix2[1][1]);
+		
 	}
 
 	public static void conditionals() {
@@ -508,89 +507,6 @@ public class Basics {
 			System.out.println("b: " + b);
 		}
 		// System.out.println("b: " + b); // this won't work, because b is not defined outside the block
-
-	}
-
-	public static void loops() {
-		// Loops: let the computer do the work for you! DRY: Don't Repeat Yourself!
-		// Loops are also called iteration, verb: to iterate
-
-		// FOR LOOPS
-		// variable name i
-		for (int i = 0; i < 5; i++) {
-			System.out.println("i = " + i);
-		}
-		System.out.println("----------------------------------------");
-
-		// loop over items in an array
-		String[] strings = { "Hello", " ", "World", ", ", "How", " ", "Are", " ", "You", "?" };
-		for (int i = 0; i < strings.length; i++) {
-			System.out.print(strings[i]);
-		}
-		System.out.println();
-		System.out.println("----------------------------------------");
-
-		// foreach: loop over items in an array, easier
-		for (String myString : strings) {
-			System.out.print(myString);
-		}
-		System.out.println();
-		System.out.println("----------------------------------------");
-
-		// WHILE LOOPS
-		int i = 0;
-		while (i < 5) {
-			System.out.println(i + " ");
-			i++;
-		}
-		System.out.println("----------------------------------------");
-
-		// While loops are mainly useful when you don't know beforehand when a condition will be met
-		// For example: Wait for 3 seconds (busy waiting);
-		long startTime = System.currentTimeMillis();
-		long counter = 0;
-		System.out.println("Start counting!");
-		while (System.currentTimeMillis() < startTime + 3000) {
-			counter++;
-		}
-		System.out.println("Stop Counting. Counter: " + counter);
-		System.out.println("----------------------------------------");
-
-		System.out.println("DO WHILE");
-		// DO WHILE
-		int j = 0;
-		do {
-			System.out.println(j + " ");
-			j++;
-		} while (j < 5);
-
-		// NOTE: DO ... WHILE loops are almost never used
-		System.out.println("----------------------------------------");
-
-		// BREAK: preemptively stopping the loop
-		System.out.println("BREAK");
-		i = 0;
-		while (i < 5) {
-			System.out.println(i + " ");
-			if (i == 3) {
-				break;
-			}
-			i++;
-		}
-		System.out.println("----------------------------------------");
-
-		// CONTINUE: Skip an iteration
-		System.out.println("CONTINUE");
-		i = 0;
-		while (i < 5) {
-			i++;
-			if (i == 3) {
-				continue;
-			}
-			System.out.println(i + " ");
-
-		}
-		System.out.println("----------------------------------------");
 
 	}
 

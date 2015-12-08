@@ -1,5 +1,7 @@
 package com.example.refresher.exceptions;
 
+import java.io.IOException;
+
 public class Catching {
 
 	public static void main(String[] args) {
@@ -12,6 +14,7 @@ public class Catching {
 	}
 
 	public static void exceptions() {
+		System.out.println("Catching.exceptions()");
 
 		// index out of bounds
 		// int[] myArray = {};
@@ -25,8 +28,9 @@ public class Catching {
 	}
 
 	public static void catching() {
+		System.out.println("Catching.catching()");
 		try {
-			// Can't devide by zero
+			// Can't divide by zero
 			int x = 5 / 0;
 		} catch (ArithmeticException e) {
 			System.out.println("Handling ArithmeticException:" + e.getMessage());
@@ -36,8 +40,9 @@ public class Catching {
 	}
 
 	public static void catchGeneric() {
+		System.out.println("Catching.catchGeneric()");
 		try {
-			// Can't devide by zero
+			// Can't divide by zero
 			int x = 5 / 0;
 		} catch (Exception e) {
 			System.out.println("Handling Exception:" + e.getMessage());
@@ -47,12 +52,13 @@ public class Catching {
 	}
 
 	public static void catchMultiple() {
+		System.out.println("Catching.catchMultiple()");
 		try {
 			// index out of bounds
 			int[] myArray = {};
 			myArray[-1] = 123;
 
-			// Can't devide by zero
+			// Can't divide by zero
 			int x = 5 / 0;
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("Handling ArrayIndexOutOfBoundsException:" + e.getMessage());
@@ -63,12 +69,13 @@ public class Catching {
 	}
 
 	public static void catchAll() {
+		System.out.println("Catching.catchAll()");
 		try {
 			// index out of bounds
 			int[] myArray = {};
 			myArray[-1] = 123;
 
-			// Can't devide by zero
+			// Can't divide by zero
 			int x = 5 / 0;
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("Handling ArrayIndexOutOfBoundsException:" + e.getMessage());

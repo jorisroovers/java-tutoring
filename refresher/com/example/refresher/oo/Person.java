@@ -1,5 +1,7 @@
 package com.example.refresher.oo;
 
+// IMPORTANT: every class extends from Object
+// public class Person extends Object {
 public class Person {
 
 	public String firstName;
