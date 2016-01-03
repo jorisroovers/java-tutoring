@@ -14,9 +14,9 @@ public class Simple {
 
 		// readNumber();
 
-		// math();
+		math();
 
-		bigDecimal();
+		// bigDecimal();
 	}
 
 	public static void javaLangPackages() {
@@ -172,10 +172,6 @@ public class Simple {
 		System.out.println("n2.min(n1): " + n2.min(n1));
 		System.out.println("n2.max(n1): " + n2.max(n1));
 
-	}
-
-	public static void formatter() {
-		// TODO (joris.roovers): implement
 	}
 
 	public static void secureRandom() {

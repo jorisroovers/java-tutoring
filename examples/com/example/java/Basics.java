@@ -19,13 +19,13 @@ public class Basics {
 
 		// types();
 
-		arithmetic();
+		// arithmetic();
 
 		// arrays();
 
 		// conditionals();
 
-		// conditionalsSwitch();
+		conditionalsSwitch();
 
 		// int x = 123;
 		// scoping(x);
@@ -52,7 +52,8 @@ public class Basics {
 		System.out.println("World!");
 		System.out.printf("World %s!", "World");
 		System.out.println();
-		System.out.printf("World %s %d!", "World", 2);
+		System.out.printf("World %s %d!", "New World", 2);
+		System.out.printf("The number Pi is approximately equal to %f!", 3.14); // use %f for floats/doubles
 		System.out.println();
 		System.out.println("-----------------------");
 
@@ -408,27 +409,24 @@ public class Basics {
 		// If a string can have many possible values, you can
 		String value = "myValue";
 		switch (value) {
-		case "myValue": {
+		case "myValue":
 			System.out.println("Found 'myValue'");
 			break;
-		}
-		case "different value": {
+		case "different value":
 			System.out.println("Found 'different value'");
 			break;
-		}
-		case "no break": {
-			System.out.println("Found 'different value'");
-		}
-		default: {
+		case "no break":
+			System.out.println("Found 'no break'");
+			break;
+		default:
 			System.out.println("Default value");
 			// no break needed because last value
-		}
 		}
 
 	}
 
 	public static void enums() {
-		
+
 	}
 
 	public static void scoping(int param) {

@@ -17,6 +17,11 @@ public class ScannerExample {
 		System.out.println("Enter a number: ");
 		int n = reader.nextInt();
 		System.out.println(n);
+
+		System.out.println("Enter a second number: ");
+		int n2 = reader.nextInt();
+		System.out.println(n2);
+
 		reader.close(); // IMPORTANT!
 	}
 

@@ -1,13 +1,15 @@
 package com.example.java;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class FunWithStrings {
 
 	public static void main(String[] args) {
 		// basics();
-		// equality();
-		methods();
+		equality();
+		// methods();
+		// format();
 		// regex();
 	}
 
@@ -42,6 +44,21 @@ public class FunWithStrings {
 		System.out.println("myString.equalsIgnoreCase(\"hello world!\"): " + myString.equalsIgnoreCase("hello world!"));
 
 		System.out.println();
+
+		// == vs. equals()
+		System.out.println("== vs. equals()");
+		String myString1 = "foo";
+		String myString2 = "foo";
+
+		System.out.println("myString1 == myString2: " + (myString1 == myString2));
+		Scanner input = new Scanner(System.in);
+		System.out.print("Provide inputStr1: ");
+		String inputStr1 = input.nextLine();
+		System.out.print("Provide inputStr2: ");
+		String inputStr2 = input.nextLine();
+		System.out.println("inputStr1 == inputStr2: " + (inputStr1 == inputStr2));
+		System.out.println("inputStr1.equals(inputStr2): " + (inputStr1.equals(inputStr2)));
+
 	}
 
 	public static void methods() {
@@ -77,6 +94,48 @@ public class FunWithStrings {
 		System.out.println("myString.split(\" \"): " + Arrays.toString(myString.split(" ")));
 
 		System.out.println();
+	}
+
+	public static void format() {
+		// Strings
+		String msg = String.format("Hi, my name is %s %s", "John", "Smith");
+		System.out.println(msg);
+		// for most (not all) format specifiers, you can also use CAPITAL LETTERS -> %S instead of %s
+		msg = String.format("Hi, my name is %S %S", "John", "Smith");
+		System.out.println(msg);
+		System.out.println();
+
+		// integer, long, short
+		msg = String.format("The integer two in decimal digits is '%d'", 2);
+		System.out.println(msg);
+		msg = String.format("The short two in decimal digits is '%d'", (short) 2);
+		System.out.println(msg);
+		msg = String.format("The long two in decimal digits is '%d'", 2L);
+		System.out.println(msg);
+		msg = String.format("The integer ten in octal digits is '%o'", 10); // %o -> octal
+		System.out.println(msg);
+		System.out.println();
+
+		// floats/doubles
+		msg = String.format("The number PI is approximately equal to %f", 3.141592);
+		System.out.println(msg);
+		// precision > .1f -> 1 decimal, .2f -> 2 decimals, etc
+		msg = String.format("The number PI is approximately equal to %.1f", 3.141592);
+		System.out.println(msg);
+		msg = String.format("The number PI is approximately equal to %.2f", 3.141592);
+		System.out.println(msg);
+		msg = String.format("The number PI is approximately equal to %.3f", 3.141592);
+		System.out.println(msg);
+		msg = String.format("The number PI is approximately equal to %e", 3.141592); // %e -> scientific notation
+		System.out.println(msg);
+		// %a -> hexadecimal floating-point number with a significand and an exponent
+		msg = String.format("The number PI is approximately equal to %a", 3.141592);
+		System.out.println(msg);
+		System.out.println();
+
+		// TODO(joris.roovers): continue here:
+		// https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html
+
 	}
 
 	public static void regex() {

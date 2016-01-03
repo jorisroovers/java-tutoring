@@ -3,6 +3,7 @@ package com.example.java;
 public class Arithmetic {
 
 	public static void main(String[] args) {
+		// System.out.println((4 % -10));
 		// ex1();
 		// ex2();
 		ex3();
@@ -36,6 +37,7 @@ public class Arithmetic {
 		System.out.println("21*3/2*3: " + (21 * 3 / 2 * 3));
 		System.out.println("(18%4)/(64%8-32/4): " + (18 % 4) / (64 % 8 - 32 / 4));
 		System.out.println("3*(4%(5*2)): " + (3 * (4 % (5 * 2))));
+		System.out.println("3*(4%(5*-2)): " + (3 * (4 % (5 * -2))));
 		// 17/2*(4+23/3) = 17 / 2 * (4 + 7) = 17 / 2 * 11 = 8 * 11 = 88
 		System.out.println("17/2*(4+23/3): " + (17 / 2 * (4 + 23 / 3)));
 		// = 12 / 12 / 4 = 1 / 4 = 0
@@ -57,8 +59,16 @@ public class Arithmetic {
 		i = 4 * (j + 16) % k; // = 4 * (42+16) % 11 = 4 * 58 % 11 = 232 % 11 = 1
 		System.out.println("i = " + i);
 
+		i = 21;
+		j = 42;
+		k = 11;
+
 		i = i - j + k * 7;
 		System.out.println("i = " + i);
+
+		i = 21;
+		j = 42;
+		k = 11;
 
 		i = (i - j + k) * 7;
 		System.out.println("i = " + i);

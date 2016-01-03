@@ -13,6 +13,9 @@ public class Application1 {
 		Course course = new Course("Computer Programming");
 		teacher.setCourse(course);
 
+		Person2 person2 = new Person2();
+		person2.firstName = "foo";
+
 		// TODO: access methods, inheritance, polymorphism
 
 	}

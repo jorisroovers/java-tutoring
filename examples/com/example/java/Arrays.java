@@ -4,7 +4,7 @@ public class Arrays {
 
 	public static void main(String[] args) {
 		simpleArrays();
-		// multiDimensional();
+		multiDimensional();
 	}
 
 	public static void simpleArrays() {
