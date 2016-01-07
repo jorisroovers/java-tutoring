@@ -3,29 +3,29 @@ package com.example.java;
 public class PostvsPreIncrement {
 
 	public static void main(String[] args) {
-		int nummer = 5;
-		drukGetalAf(nummer);
+		int number = 5;
+		printNumber(number);
 
 		System.out.println("PRE INCREMENT");
-		drukGetalAf(++nummer);
-		// WAT DE COMPILER ECHT DOET:
-		// nummer += 1 // -> stiekem door de compiler toegevoegd
-		// drukGetalAf(nummer);
-		drukGetalAf(nummer);
+		printNumber(++number);
+		// What the compiler really does:
+		// number += 1 // -> line that is added by the compiler
+		// printNumber(number);
+		printNumber(number);
 		System.out.println("----------");
 
 		System.out.println("POST INCREMENT");
-		drukGetalAf(nummer++);
-		// WAT DE COMPILER ECHT DOET:
-		// drukGetalAf(nummer);
-		// nummer += 1 // -> stiekem door de compiler toegevoegd
-		drukGetalAf(nummer);
+		printNumber(number++);
+		// What the compiler really does:
+		// printNumber(number);
+		// number += 1 // -> line that is added by the compiler
+		printNumber(number);
 		System.out.println("----------");
 
 	}
 
-	public static void drukGetalAf(int getal) {
-		System.out.println("Het getal is: " + getal);
+	public static void printNumber(int number) {
+		System.out.println("The number is: " + number);
 	}
 
 }
