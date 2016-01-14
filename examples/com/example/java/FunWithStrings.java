@@ -59,6 +59,12 @@ public class FunWithStrings {
 		System.out.println("inputStr1 == inputStr2: " + (inputStr1 == inputStr2));
 		System.out.println("inputStr1.equals(inputStr2): " + (inputStr1.equals(inputStr2)));
 
+		System.out.println();
+		String dynamicString1 = new String("foo");
+		String dynamicString2 = new String("foo");
+		System.out.println("dynamicString1 == dynamicString2: " + (dynamicString1 == dynamicString2));
+		System.out.println("dynamicString1.equals(dynamicString2): " + (dynamicString1.equals(dynamicString2)));
+
 	}
 
 	public static void methods() {
@@ -67,6 +73,7 @@ public class FunWithStrings {
 
 		System.out.println("myString.isEmpty(): " + myString.isEmpty());
 		System.out.println("\"\".isEmpty(): " + "".isEmpty());
+		System.out.println("myString.charAt(0): " + myString.charAt(0));
 		System.out.println("myString.contains(\"Hello\"): " + myString.contains("Hello"));
 		System.out.println("myString.startsWith(\"Hello\"): " + myString.startsWith("Hello"));
 		System.out.println("myString.startsWith(\"foo\"): " + myString.startsWith("foo"));

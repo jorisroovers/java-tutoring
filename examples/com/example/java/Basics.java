@@ -15,9 +15,9 @@ public class Basics {
 		// alternatively, you can invoke static methods using the class Name.
 		// Basics.output();
 
-		// variables();
+		variables();
 
-		// types();
+		types();
 
 		// arithmetic();
 
@@ -25,7 +25,7 @@ public class Basics {
 
 		// conditionals();
 
-		conditionalsSwitch();
+		// conditionalsSwitch();
 
 		// int x = 123;
 		// scoping(x);
@@ -116,6 +116,7 @@ public class Basics {
 
 		// integers
 		// primitive types: cannot be nullified, cannot be used in generic datastructures, don't have methods etc.
+		int declaredNumber;
 		int number = 5; // the number 5 is called a literal!
 		Integer numberObj = 7;
 		int hexNumber = 0x23; // 35
@@ -128,6 +129,7 @@ public class Basics {
 		System.out.println("Integer MIN VALUE:" + Integer.MIN_VALUE + ", MAX VALUE:" + Integer.MAX_VALUE);
 		System.out.println();
 
+		short declaredShort;
 		short shortNumber = 5; // what happens here is type-coercion (integer is coerced to a short)
 		Short shortObj = 2;
 		// shortObj = 64000; // this won't work because 64000 doesn't fit in a short
@@ -135,6 +137,7 @@ public class Basics {
 		System.out.println("Short MIN VALUE:" + Short.MIN_VALUE + ", MAX VALUE:" + Short.MAX_VALUE);
 		System.out.println();
 
+		long declaredLong;
 		long longNumber = 123;
 		Long longObj = 456l; // notice the L at the end
 		System.out.println("longObj:" + numberObj + " class: " + longObj.getClass() + " bytes: " + Long.BYTES);
@@ -144,6 +147,7 @@ public class Basics {
 		// Note: You can do bigger numbers using BigInteger or unsigned types, but that's beyond the basics
 
 		// booleans = true or false
+		boolean declaredBool;
 		boolean myBool = true;
 		Boolean boolObj = false;
 		System.out.println("myBool: " + myBool);
@@ -152,6 +156,7 @@ public class Basics {
 
 		// decimals!
 		// Float = ~ 7 decimal precisions
+		float declaredFloat;
 		float floatNumber = 10.0f; // notice the 'f'
 		Float floatObj = 10.0f;
 
@@ -187,6 +192,7 @@ public class Basics {
 		// Strings
 		// A string is really a series of characters ended by the 'null character' \0. Since it's such a common
 		// use-case it has its own type.
+		String declaredString;
 		String myString = "Hello World!";
 		System.out.println("myString: " + myString);
 
@@ -399,34 +405,6 @@ public class Basics {
 
 	public static void nestedIfs() {
 		// TODO
-	}
-
-	public static void conditionalsSwitch() {
-		System.out.println("Basics.conditionalsSwitch()");
-
-		// Switch on Strings: Java 7
-		// You can switch: int, String, char
-		// If a string can have many possible values, you can
-		String value = "myValue";
-		switch (value) {
-		case "myValue":
-			System.out.println("Found 'myValue'");
-			break;
-		case "different value":
-			System.out.println("Found 'different value'");
-			break;
-		case "no break":
-			System.out.println("Found 'no break'");
-			break;
-		default:
-			System.out.println("Default value");
-			// no break needed because last value
-		}
-
-	}
-
-	public static void enums() {
-
 	}
 
 	public static void scoping(int param) {

@@ -6,7 +6,9 @@ public class Arithmetic {
 		// System.out.println((4 % -10));
 		// ex1();
 		// ex2();
-		ex3();
+		// ex3();
+		ex4();
+		// ex5();
 	}
 
 	public static void ex1() {
@@ -72,6 +74,58 @@ public class Arithmetic {
 
 		i = (i - j + k) * 7;
 		System.out.println("i = " + i);
+
+	}
+
+	public static void ex4() {
+		System.out.println("5 + 25 / 12 > 6: " + (5 + 25 / 12 > 6));
+		System.out.println("5 <= 25 / 12 && 6 * 4 > 3: " + (5 <= 25 / 12 || 6 * 4 > 3));
+
+		int x = 30;
+		int y = 40;
+		int a = 10;
+		int b = 5;
+		System.out.println("x + 2 < y || !(y == 40 && a * 2 > 5): " + (x + 2 < y || !(y == 40 && a * 2 > 5)));
+		System.out.println("!(x + y < 10 || a == 9) && b > 3: " + (!(x + y < 10 || a == 9) && b > 3));
+		System.out.println("x + y != 100 || (a == 1 && b > 3): " + (x + y != 100 || (a == 1 && b > 3)));
+	}
+
+	public static void ex5() {
+		int a = 0;
+		int b = 0;
+		int c = 0;
+		a = ++b + ++c;
+		System.out.println("a = ++b + ++c;");
+		System.out.println("a = " + a);
+		System.out.println("b = " + b);
+		System.out.println("c = " + c);
+
+		a = 0;
+		b = 0;
+		c = 0;
+		a = b++ + c++;
+		System.out.println("a = b++ + c++;");
+		System.out.println("a = " + a);
+		System.out.println("b = " + b);
+		System.out.println("c = " + c);
+
+		a = 0;
+		b = 0;
+		c = 0;
+		a = ++b + c++;
+		System.out.println("a = ++b + c++;");
+		System.out.println("a = " + a);
+		System.out.println("b = " + b);
+		System.out.println("c = " + c);
+
+		a = 0;
+		b = 0;
+		c = 0;
+		a = b-- + c--;
+		System.out.println("a = b-- + c--;");
+		System.out.println("a = " + a);
+		System.out.println("b = " + b);
+		System.out.println("c = " + c);
 
 	}
 
