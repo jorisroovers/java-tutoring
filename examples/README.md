@@ -23,9 +23,9 @@ To run from the commandline:
 
 ```bash
 // first compile
-javac com/example/refresher/Refresher
+javac com/example/java/Basics
 // now run
-java com.example.refresher.Refresher
+java com.example.java.Basics
 ```
 
 To generate JavaDocs from Eclipse, use: Project > Generate JavaDoc

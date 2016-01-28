@@ -14,6 +14,24 @@ public class Parameters {
 		Person person = new Person("John", 43);
 		Parameters.assignByReference(person);
 		System.out.println("After Parameters.assignByReference(person): " + person);
+		System.out.println();
+
+		// Arrays are also passed by reference
+		// details:
+		// http://stackoverflow.com/questions/12757841/are-arrays-passed-by-value-or-passed-by-reference-in-java
+		int[] myArray = { 2, 4 };
+		System.out.print("myArray (before call to assignArray): ");
+		for (int i = 0; i < myArray.length; i++) {
+			System.out.print(myArray[i] + " ");
+		}
+		System.out.println();
+		assignArray(myArray);
+		System.out.print("myArray (after call to assignArray): ");
+		for (int i = 0; i < myArray.length; i++) {
+			System.out.print(myArray[i] + " ");
+		}
+		System.out.println();
+		System.out.println();
 
 		// Method overloading. Same method name, but different method. Actual method that is called is determined based
 		// on parameter type.
@@ -37,6 +55,16 @@ public class Parameters {
 		System.out.println("person: " + person);
 		person.setName("Lisa");
 		System.out.println("person: " + person);
+	}
+
+	public static void assignArray(int[] myArray) {
+		myArray[0] = 5;
+		myArray[1] = 10;
+		System.out.print("myArray (in assignArray): ");
+		for (int i = 0; i < myArray.length; i++) {
+			System.out.print(myArray[i] + " ");
+		}
+		System.out.println();
 	}
 
 	public static int add(int a, int b) {

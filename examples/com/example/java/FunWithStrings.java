@@ -7,10 +7,11 @@ public class FunWithStrings {
 
 	public static void main(String[] args) {
 		// basics();
-		equality();
+		// equality();
 		// methods();
 		// format();
 		// regex();
+		stringBuilder();
 	}
 
 	public static void basics() {
@@ -142,6 +143,27 @@ public class FunWithStrings {
 
 		// TODO(joris.roovers): continue here:
 		// https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html
+
+	}
+
+	public static void stringBuilder() {
+		System.out.println("FunWithStrings.StringBuilder()");
+		StringBuilder builder = new StringBuilder();
+		builder.append("hello ");
+		builder.append(1);
+		builder.append(" ");
+		builder.append(5.3);
+
+		System.out.println("builder.length(): " + builder.length());
+		// capacity = size that is allocated in the buffer (automatically enlarged when required)
+		System.out.println("builder.capacity(): " + builder.capacity());
+		System.out.println("builder.toString(): " + builder.toString());
+		builder.append(" this is another string that is somewhat longer");
+		System.out.println("builder.length(): " + builder.length());
+		System.out.println("builder.capacity(): " + builder.capacity());
+		System.out.println("builder.reverse(): " + builder.reverse());
+
+		// TODO (joris.roovers): continue
 
 	}
 
